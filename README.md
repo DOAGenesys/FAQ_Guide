@@ -241,7 +241,7 @@ Create a simple digital bot flow (or a bot flow in case you want to test it over
 
 ### Context Flow Between Multiple Guides
 
-We could expand the scope of this blueprint to use several guides in the parent architect flow (which is not the current case). In that scenario, you can chain context between them:
+We could expand the scope of this blueprint to use several guides in the parent architect flow (which is not the current case). In that scenario, you can pass the context across them:
 
 1.  **First Guide** → Outputs `summaryOut`.
 2.  **Architect Flow** → Captures the summary and passes it to the next guide.
