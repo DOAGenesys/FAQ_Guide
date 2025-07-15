@@ -231,7 +231,7 @@ Create a simple digital bot flow with:
 
 ### Input Variables
 
-  - **summary\_in**: Contains a summary of any previous conversation. This enables the guide to maintain context across multiple interactions or transfers.
+  - **summary\_in**: Contains a summary of any previous conversation. This enables the guide to maintain context across multiple guide invocations (in case the architech flow has more than one).
   - **kb\_id**: The unique identifier of your knowledge base. This allows the same guide to work with different KBs in different environments (dev, test, prod).
   - **kb\_confidence\_score**: The minimum confidence threshold ($0.0$ to $1.0$) for search results. Higher values return more precise matches.
   - **max\_articles**: The maximum number of articles to retrieve from the knowledge base.
@@ -243,7 +243,7 @@ Create a simple digital bot flow with:
 
 ### Context Flow Between Multiple Guides
 
-When using multiple guides in a single Architect flow, you can chain context between them:
+We could expand the scope of this blueprint to use several guides in the parent architect flow (which is not the current case). In that scenario, you can chain context between them:
 
 1.  **First Guide** → Outputs `summary_out`.
 2.  **Architect Flow** → Captures the summary and passes it to the next guide.
