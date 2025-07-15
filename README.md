@@ -94,7 +94,7 @@ This function is the tool that searches the knowledge base and provides clean te
 }
 ```
 
-Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Copy & paste that same value in the JSON above. Additionally, make sure you correctly set the domain of your GC org.
+Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Copy & paste that same value in the JSON above. Additionally, make sure you correctly set the domain of your GC org (e.g., `mypurecloud.de`, `usw2.pure.cloud`).
 
 **Input Contract**
 
@@ -106,8 +106,7 @@ Note: The first time you access to your newly created function, you will see a p
     "query",
     "KBId",
     "maxArticles",
-    "minConfidence",
-    "domain"
+    "minConfidence"
   ],
   "additionalProperties": false,
   "properties": {
@@ -127,10 +126,6 @@ Note: The first time you access to your newly created function, you will see a p
     "minConfidence": {
       "type": "number",
       "description": "Minimum confidence threshold for search results (0.0 to 1.0)."
-    },
-    "domain": {
-      "type": "string",
-      "description": "Your Genesys Cloud domain (e.g., mypurecloud.com, mypurecloud.de, etc.)."
     }
   }
 }
@@ -178,41 +173,38 @@ Note: The first time you access to your newly created function, you will see a p
 
     Navigate to the Guide creation interface and create these variables.
 
-      - **summary\_in**
+      - **summaryIn**
 
           - Availability: Input
           - Description: Summary of previous customer conversation, before reaching this workflow. If empty, ignore.
           - Type: string
 
-      - **summary\_out**
+      - **summaryOut**
 
           - Availability: Output
           - Description: A compact summary of all the conversation so far.
           - Type: string
 
-      - **kb\_id**
+      - **KBId**
 
           - Availability: Input
           - Description: The id of the knowledge base used to ground responses.
           - Type: string
 
-      - **kb\_confidence\_score**
+      - **minConfidence**
 
           - Availability: Input
           - Description: Minimum confidence threshold for an article of the knowledge base to be considered semantically relevant for the customer query.
           - Type: number
 
-      - **max\_articles**
+      - **maxArticles**
 
           - Availability: Input
           - Description: The maximum number of knowledge base articles to use for grounding the response.
           - Type: number
 
-      - **domain**
+Note: 
 
-          - Availability: Input
-          - Description: The Genesys Cloud domain where the KB resides (e.g., mypurecloud.com).
-          - Type: string
 
 2.  **Configure the Guide Prompt**:
 
@@ -236,54 +228,25 @@ Create a simple digital bot flow (or a bot flow in case you want to test it over
 
 ### Input Variables
 
-  - **summary\_in**: Contains a summary of any previous conversation. This enables the guide to maintain context across multiple guide invocations (in case the architech flow has more than one).
-  - **kb\_id**: The unique identifier of your knowledge base. This allows the same guide to work with different KBs in different environments (dev, test, prod).
-  - **kb\_confidence\_score**: The minimum confidence threshold ($0.0$ to $1.0$) for search results. Higher values return more precise matches.
-  - **max\_articles**: The maximum number of articles to retrieve from the knowledge base.
-  - **domain**: Your Genesys Cloud regional domain (e.g., `mypurecloud.de`, `usw2.pure.cloud`).
+  - **summaryIn**: Contains a summary of any previous conversation. This enables the guide to maintain context across multiple guide invocations (in case the architech flow has more than one).
+  - **KBId**: The unique identifier of your knowledge base. This allows the same guide to work with different KBs in different environments (dev, test, prod).
+  - **minConfidence**: The minimum confidence threshold ($0.0$ to $1.0$) for search results. Higher values return more precise matches.
+  - **maxArticles**: The maximum number of articles to retrieve from the knowledge base.
 
 ### Output Variables
 
-  - **summary\_out**: A concise summary of the entire conversation that occurred within the guide. This can be used by the parent Architect flow for logging, analytics, or passing context to other actions.
+  - **summaryOut**: A concise summary of the entire conversation that occurred within the guide. This can be used by the parent Architect flow for logging, analytics, or passing context to other actions.
 
 ### Context Flow Between Multiple Guides
 
 We could expand the scope of this blueprint to use several guides in the parent architect flow (which is not the current case). In that scenario, you can chain context between them:
 
-1.  **First Guide** → Outputs `summary_out`.
+1.  **First Guide** → Outputs `summaryOut`.
 2.  **Architect Flow** → Captures the summary and passes it to the next guide.
-3.  **Second Guide** → Receives the summary as `summary_in`.
+3.  **Second Guide** → Receives the summary as `summaryIn`.
 
 Example Architect flow structure:
-`Start → Call Guide 1 → Store summary_out → Call Guide 2 (with summary_in) → End`
-
------
-
-## Configuration Examples
-
-### Basic Configuration
-
-```json
-{
-  "kb_id": "your-knowledge-base-id-here",
-  "kb_confidence_score": 0.7,
-  "max_articles": 3,
-  "domain": "mypurecloud.com",
-  "summary_in": ""
-}
-```
-
-### With Previous Context
-
-```json
-{
-  "kb_id": "your-knowledge-base-id-here",
-  "kb_confidence_score": 0.7,
-  "max_articles": 3,
-  "domain": "mypurecloud.com",
-  "summary_in": "Customer asked about account balance and payment due date. Provided account info and payment options."
-}
-```
+`Start → Call Guide 1 → Store summaryOut → Call Guide 2 (with summaryIn) → End`
 
 -----
 
@@ -329,3 +292,10 @@ Example Architect flow structure:
 
       - Ensure variable names in the Guide and the Architect flow match exactly.
       - Check that the parent flow is properly passing variables to the "Call Guide" action.
+  
+4.  **Hallucinated responses**
+
+      - If you have used the same variable and parameter names mentioned in this blueprint, but if you are experienced inconsistent or hallucinated responses that do not match the KB content, it is IMPORTANT that you double check that all the guide input vars that are also in the function input params have the same name and the same type:
+
+<img width="2327" height="959" alt="image" src="https://github.com/user-attachments/assets/43e175da-6923-452d-a6ce-ec90c36627d7" />
+
