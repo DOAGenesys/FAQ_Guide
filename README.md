@@ -279,7 +279,7 @@ Example Architect flow structure:
 
 1.  **No Knowledge Base Results**
 
-      - Check that the `kb_id` and `domain` are correct.
+      - Check that the `KBId` and `domain` are correct.
       - Verify **Content Search** is enabled on the KB (must be set at creation time).
       - Ensure articles are published and searchable.
       - Try lowering the `kb_confidence_score` for testing.
