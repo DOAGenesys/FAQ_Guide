@@ -31,7 +31,7 @@ Before setting up this guide, ensure you have:
 
 1.  **Knowledge Base**: A populated Genesys Cloud knowledge base with G Finance articles, with Content Search enabled.
 2.  **OAuth Client**: A Genesys Cloud OAuth client with the Client Credentials grant type.
-3.  **Required Permissions**: The OAuth client's role must have the following permissions:
+3.  **Required Permissions**: The OAuth client's role must have at least the following permissions:
       * `knowledge:document:search`
       * `knowledge:documentAnswer:view`
       * `knowledge:documentVersion:view`
