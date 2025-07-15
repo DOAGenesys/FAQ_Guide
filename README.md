@@ -89,7 +89,7 @@ This function is the tool that searches the knowledge base and provides clean te
   "headers": {
     "gcClientId": "${credentials.GC_Client_Id}",
     "gcClientSecret": "${credentials.GC_Client_Secret}",
-	  "domain": "mypurecloud.ie"
+    "domain": "mypurecloud.ie"
   }
 }
 ```
