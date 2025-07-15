@@ -208,7 +208,7 @@ Note:
 
 2.  **Configure the Guide Prompt**:
 
-    Paste the provided guide prompt into the editor. You must then manually replace the placeholder for the function action reference using the `/` menu to select the specific Knowledge Base Search function you activated. When correct, you should see the name of the function action highlighted in violet. Make sure the variables are also correctly interpreted (green highlight).
+    Paste the provided guide prompt (FAQ_Guide.md) into the editor. You must then manually replace the placeholder for the function action reference using the `/` menu to select the specific Knowledge Base Search function you activated. When correct, you should see the name of the function action highlighted in violet. Make sure the variables are also correctly interpreted (green highlight).
 
 3.  **Test the Guide**:
 
