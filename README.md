@@ -88,12 +88,13 @@ This function is the tool that searches the knowledge base and provides clean te
   "requestUrlTemplate": "<your-function-id>",
   "headers": {
     "gcClientId": "${credentials.GC_Client_Id}",
-    "gcClientSecret": "${credentials.GC_Client_Secret}"
+    "gcClientSecret": "${credentials.GC_Client_Secret}",
+	  "domain": "mypurecloud.ie"
   }
 }
 ```
 
-Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Copy & paste that same value in the JSON above.
+Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Copy & paste that same value in the JSON above. Additionally, make sure you correctly set the domain of your GC org.
 
 **Input Contract**
 
