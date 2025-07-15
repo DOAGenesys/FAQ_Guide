@@ -17,7 +17,7 @@ The G Finance FAQ Agent is a text-based conversational guide that:
 ## Key Features
 
   - **Knowledge Base Integration**: Automatically searches and retrieves relevant information from your knowledge base using a dedicated Genesys Cloud Function.
-  - **Advanced Content Parsing**: The function intelligently processes complex KB articles (with lists, tables, etc.) into clean, readable text suitable for AI consumption.
+  - **Advanced Content Parsing**: The function intelligently processes complex KB articles (with lists, tables, etc.) into clean, readable text suitable for AI consumption, that reduces drastically the hallucination likelihood.
   - **Context Awareness**: Uses conversation summaries to maintain a natural dialogue flow.
   - **Hallucination Prevention**: All responses are grounded in actual knowledge base content.
   - **Professional Tone**: Speaks as a knowledgeable G Finance representative.
