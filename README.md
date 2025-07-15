@@ -89,7 +89,7 @@ This function is the tool that searches the knowledge base and provides clean te
 }
 ```
 
-Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Put that same value in the JSON above.
+Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Copy & paste that same value in the JSON above.
 
 **Input Contract**
 
