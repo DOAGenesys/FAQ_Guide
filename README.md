@@ -263,7 +263,7 @@ Example Architect flow structure:
 ### Confidence Scoring
 
   - Start with a confidence score of `0.6` or `0.7` for testing.
-  - Adjust based on response quality: lower for broader matches, higher for more precise matches.
+  - Adjust based on response quality: lower for broader matches, higher for more precise matches (although some meaningful info could be left out if too high).
 
 ### Testing
 
