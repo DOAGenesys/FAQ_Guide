@@ -55,6 +55,7 @@ Before setting up this guide, ensure you have:
 
       - Content Search can ONLY be enabled at creation time and cannot be added later.
       - Without Content Search, the FAQ guide's performance will be notably reduced.
+      - In case you want to reuse an existing KB, just export it in JSON format, recreate it (this time enable Content Search), and import the JSON containing the articles.
 2.  Populate the knowledge base with relevant G Finance articles.
 3.  Note the **Knowledge Base ID** (you can find this by exporting the KB to JSON format and grabbing the ID from the beginning of the file).
 4.  Test the knowledge base search functionality via the UI to ensure articles are properly indexed.
