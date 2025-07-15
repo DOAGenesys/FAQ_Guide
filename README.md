@@ -211,7 +211,7 @@ Note: The first time you access to your newly created function, you will see a p
 
 2.  **Configure the Guide Prompt**:
 
-    Paste the provided guide prompt into the editor. You must then manually replace the placeholder for the function action reference using the `/` menu to select the specific Knowledge Base Search function you activated.
+    Paste the provided guide prompt into the editor. You must then manually replace the placeholder for the function action reference using the `/` menu to select the specific Knowledge Base Search function you activated. When correct, you should see the name of the function action highlighted in violet. Make sure the variables are also correctly interpreted (green highlight).
 
 3.  **Test the Guide**:
 
