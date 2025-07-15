@@ -77,7 +77,7 @@ This function is the tool that searches the knowledge base and provides clean te
 
 **Request Body Template**
 
-```velocity
+```json
 {
   "requestType": "POST",
   "requestTemplate": "{\n  \"query\": \"$esc.jsonEncode(${input.query})\",\n  \"KBId\": \"${input.KBId}\",\n  \"maxArticles\": ${input.maxArticles},\n  \"domain\": \"mypurecloud.de\",\n  \"minConfidence\": ${input.minConfidence}\n}",
