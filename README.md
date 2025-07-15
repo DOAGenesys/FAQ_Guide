@@ -55,7 +55,11 @@ Create a Genesys Cloud OAuth client with:
 2. Create the function integration with proper credentials:
    - `GC_Client_Id`: Your OAuth client ID
    - `GC_Client_Secret`: Your OAuth client secret
-3. Test the function to ensure it returns properly formatted responses
+
+  <img width="1626" height="742" alt="image" src="https://github.com/user-attachments/assets/8afdecc1-1ec6-4601-8f7e-135a535b9ff8" />
+
+3. Activate the function integration
+4. Test the function to ensure it returns properly formatted responses
 
 ### Step 4: Create the Guide
 
