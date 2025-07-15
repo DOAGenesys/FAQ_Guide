@@ -1,6 +1,6 @@
 # G Finance FAQ Agent Guide
 
-This Genesys Cloud Guide provides an intelligent, conversational FAQ experience for G Finance customers. The guide integrates with a knowledge base search function to deliver accurate, grounded responses while maintaining a natural conversation flow. This approach can be used as a reference to create similar FAQ Guides for other industries.
+This Genesys Cloud Guide provides an agentic, human-like conversational FAQ experience for G Finance customers. The guide integrates with a knowledge base search function to deliver accurate, grounded responses while maintaining a natural conversation flow. This approach can be used as a reference to create similar FAQ Guides for other industries.
 
 ## Overview
 
