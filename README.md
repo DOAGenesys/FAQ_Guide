@@ -219,7 +219,7 @@ Note: The first time you access to your newly created function, you will see a p
 
 ### Step 5: Create the Bot Flow
 
-Create a simple digital bot flow with:
+Create a simple digital bot flow (or a bot flow in case you want to test it over voice) with:
 
 1.  **Call Guide** action pointing to your G Finance FAQ Agent Guide.
 2.  Set the necessary inputs and outputs (`kb_id`, `kb_confidence_score`, `max_articles`, `domain`, etc.).
