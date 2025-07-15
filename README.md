@@ -29,7 +29,7 @@ The G Finance FAQ Agent is a text-based conversational guide that:
 
 Before setting up this guide, ensure you have:
 
-1.  **Knowledge Base**: A populated Genesys Cloud knowledge base with G Finance articles.
+1.  **Knowledge Base**: A populated Genesys Cloud knowledge base with G Finance articles, with Content Search enabled.
 2.  **OAuth Client**: A Genesys Cloud OAuth client with the Client Credentials grant type.
 3.  **Required Permissions**: The OAuth client's role must have the following permissions:
       * `knowledge:document:search`
@@ -49,6 +49,10 @@ Before setting up this guide, ensure you have:
 
 1.  **Create your knowledge base** with G Finance articles.
       - **CRITICAL**: Enable **"Content Search"** during knowledge base creation.
+
+<img width="684" height="858" alt="image" src="https://github.com/user-attachments/assets/a1a447cb-7c59-49b4-8d56-b5ac8b4f95b8" />
+
+
       - Content Search can ONLY be enabled at creation time and cannot be added later.
       - Without Content Search, the FAQ guide's performance will be notably reduced.
 2.  Populate the knowledge base with relevant G Finance articles.
