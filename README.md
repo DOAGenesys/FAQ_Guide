@@ -307,7 +307,8 @@ Example Architect flow structure:
 ### Example G Finance KB article:
 
 
-<img width="2335" height="1032" alt="image" src="https://github.com/user-attachments/assets/5ae659c4-18f1-4c39-a4bb-6d92c1422a92" />
+<img width="2335" height="1032" alt="image" src="https://github.com/user-attachments/assets/7a807b2a-0439-4abf-a297-126658ea3619" />
+
 
 
 
