@@ -73,9 +73,20 @@ Create a Genesys Cloud OAuth client with:
 
 #### Function Integration Overview
 
-When creating the function integration, navigate to its **Integration -\> Configuration -\> Credentials** tab. You must add the OAuth Client ID and Secret obtained in Step 2, using the exact credential names **`GC_Client_Id`** and **`GC_Client_Secret`**.
+You have to create a new Function Data Action:
+
+<img width="1921" height="969" alt="image" src="https://github.com/user-attachments/assets/00230ecb-3559-460c-b9e4-b243530a98a6" />
+
+
+
+When creating that new integration, navigate to its **Integration -\> Configuration -\> Credentials** tab. You must add the OAuth Client ID and Secret obtained in Step 2, using the exact credential names **`GC_Client_Id`** and **`GC_Client_Secret`**.
 
 #### Function (Action) Overview
+
+Now you have to create a new action, and associate it to the previous integration:
+
+<img width="1194" height="658" alt="image" src="https://github.com/user-attachments/assets/63da0cff-21a8-4c91-b716-1e7acef383bb" />
+
 
 This function is the tool that searches the knowledge base and provides clean text to the Guide. Your function name must not contain blank spaces, otherwise the Guide will throw an error. Use "get_KB_matching_articles" as the name. The function calls the `POST /api/v2/knowledge/knowledgebases/{KBId}/documents/search` endpoint. Its primary value is processing the complex nested JSON response from the API to extract readable text from various block types (paragraphs, lists, tables, etc.), making it suitable for a generative AI model.
 
