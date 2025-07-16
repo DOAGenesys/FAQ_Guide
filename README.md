@@ -306,6 +306,12 @@ Example Architect flow structure:
       - Verify the OAuth credentials (`GC_Client_Id`, `GC_Client_Secret`) in the function integration are correct.
       - Check that the function's role has the **required knowledge permissions**.
       - Test the function independently via the Developer Tools before integrating it with the guide.
+      - Check the content of the "External execution log" section:
+  
+
+<img width="1373" height="1065" alt="image" src="https://github.com/user-attachments/assets/19985e3a-88d4-4d05-b829-3677c6e1fc5d" />
+
+
 
 3.  **Context Not Flowing**
 
