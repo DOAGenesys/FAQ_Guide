@@ -79,7 +79,13 @@ You have to create a new Function Data Action:
 
 
 
+
 When creating that new integration, navigate to its **Integration -\> Configuration -\> Credentials** tab. You must add the OAuth Client ID and Secret obtained in Step 2, using the exact credential names **`GC_Client_Id`** and **`GC_Client_Secret`**.
+
+
+<img width="2241" height="1122" alt="image" src="https://github.com/user-attachments/assets/20720071-7bf0-4c7e-94f9-9b56ef362cdd" />
+
+
 
 #### Function (Action) Overview
 
