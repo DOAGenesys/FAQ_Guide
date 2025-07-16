@@ -301,3 +301,12 @@ Example Architect flow structure:
 
 <img width="2327" height="959" alt="image" src="https://github.com/user-attachments/assets/43e175da-6923-452d-a6ce-ec90c36627d7" />
 
+## Expected performance - example
+
+<img width="2335" height="1032" alt="image" src="https://github.com/user-attachments/assets/f6cdcd29-2c8c-4a1f-998a-9db05eea5832" />
+<img width="723" height="689" alt="image" src="https://github.com/user-attachments/assets/6e7be485-cf33-46f3-968f-9b1f47a25338" />
+
+
+
+
+
