@@ -303,11 +303,15 @@ Example Architect flow structure:
 
 ## Expected performance - example
 
-### Example G Finance KB article
+
+### Example G Finance KB article:
+
 
 <img width="2335" height="1032" alt="image" src="https://github.com/user-attachments/assets/f6cdcd29-2c8c-4a1f-998a-9db05eea5832" />
 
-### Example response grounded by that article
+
+### Example response grounded by that article:
+
 
 <img width="723" height="689" alt="image" src="https://github.com/user-attachments/assets/6e7be485-cf33-46f3-968f-9b1f47a25338" />
 
