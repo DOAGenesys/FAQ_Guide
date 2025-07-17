@@ -98,6 +98,11 @@ This function is the tool that searches the knowledge base and provides clean te
 
 #### Genesys Cloud Function Configuration
 
+Note: to edit all the sections within the function, make sure to change to JSON mode in each of them:
+
+<img width="2877" height="1006" alt="image" src="https://github.com/user-attachments/assets/1d74e969-c7ea-48b3-9a45-c6872f2607ef" />
+
+
 **Request Body Template**
 
 ```json
