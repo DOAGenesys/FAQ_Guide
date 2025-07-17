@@ -118,7 +118,7 @@ Note: to edit all the sections within the function, make sure to change to JSON 
 }
 ```
 
-Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Body Template. Copy & paste that same value in the JSON above. Additionally, make sure you correctly set the domain of your GC org (e.g., `mypurecloud.de`, `usw2.pure.cloud`).
+Note: The first time you access to your newly created function, you will see a predefined function id in requestUrlTemplate of Request Template. Copy & paste that same value in the JSON above. Additionally, make sure you correctly set the domain of your GC org (e.g., `mypurecloud.de`, `usw2.pure.cloud`).
 
 **Input Contract**
 
