@@ -103,7 +103,7 @@ Note: to edit all the sections within the function, make sure to change to JSON 
 <img width="2877" height="1006" alt="image" src="https://github.com/user-attachments/assets/1d74e969-c7ea-48b3-9a45-c6872f2607ef" />
 
 
-**Request Body Template**
+**Request Template**
 
 ```json
 {
